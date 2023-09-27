@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: #ffffffde;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 2rem;
+}
+
+header h1 span {
+  color: red;
+}
+
+.search-bar {
+  background: transparent;
+  border-radius: 15px;
+  padding: 5px 12px;
+  border: 1px solid #ffffffde;
+  display: flex;
+  align-items: center;
+
+}
+
+.search-bar-input {
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  padding: 4px 8px;
+  
+}
+
+.search-bar-input:focus {
+  outline: none;
+}
+
+.mainContent {
+  width: 80%;
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+}
+
+.mainContent .hero-big-image {
+  width: 30%;
+  height: 420px;
+  border-radius: 5px;
+}
+
+.mainContent .hero-info {
+  width: 70%;
+}
+
+.hero-info .hero-info-name {
+  font-size: 2.5rem;
+  color: #ff8302;
+}
+
+nav {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+  
+  
+}
+
+.nav-border-bottom {
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.483);
+  margin-bottom: 25px;
+}
+
+nav a {
+  background: #1a1a1a;
+  width: 30vh;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: .5s;
+}
+
+nav a:hover {
+  background: #c95858;
+}
+
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-stats-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a0a0a;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.179);
+  border-left: solid 1px rgba(255, 255, 255, 0.179);
+
+}
+
+#star {
+  font-size: 1.5rem;
+  color: gold;
+}
+
+.hero-stats-item-left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.hero-stats-item-left h3 {
+  font-size: 1.5rem;
+}
+
+.hero-stats-item-amount {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.hero-biography {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-biography-item {
+  padding: 10px 14px;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-biography-item h3 {
+  color: #323232;
+
+  border-radius: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.182);
+  border-right: 1px solid rgba(255, 255, 255, 0.182);
+
+}
