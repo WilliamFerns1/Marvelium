@@ -155,3 +155,37 @@ nav a:hover {
   border-right: 1px solid rgba(255, 255, 255, 0.182);
 
 }
+
+.hero-appearance {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-appearance-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background: #0a0a0a;
+  border-radius: 5px; 
+}
+
+.more-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.more-info h3 {
+  color: #2d2d2d;
+  
+}
+
+.more-info-item {
+  background: #0a0a0a;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

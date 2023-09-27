@@ -12,7 +12,7 @@ export default function MainContent() {
   const [hero, setHero] = React.useState(null)
 
   React.useEffect(() => {
-    fetch("https://superheroapi.com/api.php/105815209009679/1")
+    fetch("https://superheroapi.com/api.php/105815209009679/2")
       .then(res => res.json())
       .then(data => setHero(data))
   }, [])
@@ -21,9 +21,9 @@ export default function MainContent() {
 
   return (
     <div className="mainContent">
-      <img className="hero-big-image" src={hero?.image.url} alt="hero" />
+      <img style={{ boxShadow: `${hero?.appearance.race.toLowerCase() === "mutant" ? "rgba(255, 0, 0, 0.497)" : hero?.appearance.race.toLowerCase() === "human" ? "blue" : "red"} 0px 19px 38px, ${hero?.appearance.race.toLowerCase() === "mutant" ? "rgba(255, 0, 0, 0.497)" : hero?.appearance.race.toLowerCase() === "human" ? "blue" : "red"} 0px 15px 12px`}} className="hero-big-image" src={hero?.image.url} alt="hero" />
       <div className="hero-info">
-        <h1 className="hero-info-name">{hero?.name}</h1>
+        <h1 style={{ color: hero?.appearance.race.toLowerCase() === "mutant" ? "red" : hero?.appearance.race.toLowerCase() === "human" ? "blue" : "yellow" }} className="hero-info-name">{hero?.name}</h1>
         
         <BrowserRouter>
           <Routes>
