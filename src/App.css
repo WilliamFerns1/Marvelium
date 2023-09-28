@@ -1,3 +1,7 @@
+html {
+  font-size: 1rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,10 +11,12 @@
 
 body {
   background: #0f0f0f;
+  overflow-x: hidden;
 }
 
 header {
   display: flex;
+  height: 10vh;
   justify-content: space-between;
   align-items: center;
   padding: 10px 30px;
@@ -28,37 +34,45 @@ header h1 span {
   border: 1px solid #ffffffde;
   display: flex;
   align-items: center;
+  width: 42vh;
 
 }
 
 .search-bar-input {
   background: transparent;
+  width: 90%;
   border: none;
   font-size: 12px;
   padding: 4px 8px;
   
 }
 
+
+
 .search-bar-input:focus {
   outline: none;
 }
 
 .mainContent {
-  width: 80%;
+  width: 100vw;
   padding: 30px;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 60px;
 }
 
 .mainContent .hero-big-image {
-  width: 30%;
+  max-width: 100%;
   height: 420px;
   border-radius: 5px;
 }
 
 .mainContent .hero-info {
-  width: 70%;
+  width: 100%;
+  padding: 10px;
 }
 
 .hero-info .hero-info-name {
@@ -66,12 +80,19 @@ header h1 span {
   color: #ff8302;
 }
 
-nav {
+.nav {
+  width: 100%;
   display: flex;
-  gap: 5px;
-  margin-left: auto;
-  
-  
+  flex-direction: column;
+}
+
+nav {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;  
+  flex-wrap: wrap;
 }
 
 .nav-border-bottom {
@@ -81,8 +102,8 @@ nav {
 }
 
 nav a {
+  width: 24%;
   background: #1a1a1a;
-  width: 30vh;
   padding: 0.6rem 1.2rem;
   text-decoration: none;
   text-align: center;
@@ -96,6 +117,7 @@ nav a:hover {
 }
 
 .hero-stats {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -165,6 +187,7 @@ nav a:hover {
 .hero-appearance-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 30px;
   background: #0a0a0a;
   border-radius: 5px; 
@@ -186,6 +209,108 @@ nav a:hover {
   border-radius: 5px;
   padding: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 10px;
+}
+
+.existing-content {
+  width: 100%;
+}
+
+.hero-info-content {
+  width: 100%;
+}
+
+.search-results {
+  width: 42vh;
+  overflow-y: auto;
+  height: 200px;
+  position: absolute;
+  top: 10vh;
+  right: 30px;
+  display: flex; /* Initially hide search results */
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-results::-webkit-scrollbar {
+  width: 1px;
+  height: 8px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+background-color: red; /* Set the background color */
+border-radius: 4px; /* Add border-radius for rounded corners */
+/* Set the height of the scrollbar thumb */
+
+}
+
+.search-result img {
+  width: 75px;
+  border-radius: 5px;
+  border: 2px solid red;
+}
+.search-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+@media(max-width: 952px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 800px) {
+  nav a {
+    width: 32%;
+  }
+  header {
+    flex-direction: column;
+
+  }
+  .search-results {
+    justify-content: center;
+  }
+  .search-result-container {
+    top: 15vh;
+  }
+}
+
+@media(max-width: 600px) {
+
+  .mainContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .search-bar {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width: 420px) {
+  nav a {
+    width: 49%;
+  }
 }
