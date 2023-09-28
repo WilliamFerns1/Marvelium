@@ -25,7 +25,7 @@ If you encounter any issues while using Marvelium or have any questions, feel fr
 Marvelium is your portal to the exciting world of superheroes, thanks to the open-source and free Superhero API. Explore your favorite heroes, learn about their incredible powers, and let your imagination soar with Marvelium!
 
 <p align="center">
-  <img src="" alt="Marvelium Superheroes" />
+  <img src="https://cdn.discordapp.com/attachments/1107675935882358875/1156996339629035541/Add_a_heading.png?ex=6517004f&is=6515aecf&hm=02d6f22da485eec592bee8cbc15ab9ebdb1dbb315caea1d5a23fb61b32457801&" alt="Marvelium Superheroes" />
 </p>
 
 ---
