@@ -225,14 +225,22 @@ nav a:hover {
 
 .search-results {
   width: 42vh;
-  overflow-y: auto;
   height: 200px;
+  overflow-y: scroll;
+  opacity: 0;
+  transition: max-height .3s ease-in-out, opacity .3s ease-in-out;
   position: absolute;
   top: 10vh;
   right: 30px;
-  display: flex; /* Initially hide search results */
+  display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 3px;
+}
+
+/* Styles for when search results are open */
+.search-results.open {
+  max-height: 300px; /* Adjust the max-height as needed */
+  opacity: 1;
 }
 
 .search-results::-webkit-scrollbar {
@@ -257,8 +265,28 @@ border-radius: 4px; /* Add border-radius for rounded corners */
 .search-result {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  background-color: #141414ac;
+  padding: 10px;
 
+}
+
+.search-result h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 801px) {
+  nav a {
+    /* Add your default styles for larger screens here */
+  }
+
+  nav a:hover {
+    background: #c95858;
+    color: #ffffffde;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 @media(max-width: 952px) {
@@ -268,30 +296,39 @@ border-radius: 4px; /* Add border-radius for rounded corners */
 }
 
 @media(max-width: 800px) {
-  nav a {
-    width: 32%;
-  }
-  header {
-    flex-direction: column;
-
-  }
-  .search-results {
-    justify-content: center;
-  }
-  .search-result-container {
-    top: 15vh;
-  }
-}
-
-@media(max-width: 600px) {
 
   .mainContent {
     flex-direction: column;
     gap: 20px;
   }
 
+
+  nav a {
+    width: 32%;
+  }
+
+  
   header {
     padding: 10px;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+
+  .search-results {
+    top: 20vh;
+    left: calc(50% - 42vh/2);
+
+
+  }
+  .search-result-container {
+  }
+}
+
+@media(max-width: 600px) {
+
+  header {
+    margin-bottom: 10px;
   }
 
   header h1 {
@@ -300,6 +337,10 @@ border-radius: 4px; /* Add border-radius for rounded corners */
 
   .search-bar {
     font-size: 0.8rem;
+  }
+
+  .search-results {
+    top: 17%;
   }
 }
 
@@ -313,4 +354,18 @@ border-radius: 4px; /* Add border-radius for rounded corners */
   nav a {
     width: 49%;
   }
+
+}
+
+@media(max-width: 370px) {
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-results {
+    width: 80vw;
+    left: calc(50% - 40vw);
+  }
+
+
 }
